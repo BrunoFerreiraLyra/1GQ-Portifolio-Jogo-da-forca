@@ -1,0 +1,169 @@
+/* app/page.module.css */
+
+/* --- 1. ESTRUTURA PRINCIPAL --- */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+/* --- 2. ÁREA DA FORCA --- */
+.forcaArea {
+  position: relative;
+  width: 250px; 
+  height: 300px;
+  margin: 20px 0;
+  
+  /* --- NOVIDADES PARA ESCONDER A DIFERENÇA DE FUNDO --- */
+  background-color: #ffffff; /* Fundo branco para bater com a imagem do Paint */
+  border-radius: 12px;       /* Bordas arredondadas para ficar moderno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem levinha */
+  padding: 10px;             /* Dá um respiro para o desenho não grudar na borda */
+}
+
+.imagemBase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- 3. A PALAVRA E OS TRACINHOS --- */
+.palavraContainer {
+  display: flex;
+  gap: 15px; 
+  margin: 40px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letraCaixa {
+  width: 40px;
+  height: 50px;
+  border-bottom: 4px solid #1a1a1a; /* O tracinho embaixo da letra */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px; 
+  font-weight: bold;
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+/* --- 4. O TECLADO VIRTUAL --- */
+.teclado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: center;
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.tecla {
+  width: 55px; 
+  height: 55px; 
+  font-size: 22px; 
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #e5e7eb; 
+  color: #374151; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tecla:hover:not(:disabled) {
+  background-color: #d1d5db; 
+}
+
+.teclaCorreta {
+  background-color: #22c55e !important; /* Verde */
+  color: white !important;
+  cursor: not-allowed;
+}
+
+.teclaErrada {
+  background-color: #ef4444 !important; /* Vermelho */
+  color: white !important;
+  opacity: 0.6; 
+  cursor: not-allowed;
+}
+
+/* --- 5. TELA DE VITÓRIA / DERROTA --- */
+/* app/page.module.css */
+
+.mensagemFim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 25px;
+  
+  /* MUDANÇA: Fundo cinza claro para destacar o branco das bandeiras */
+  background-color: #f4f4f4; 
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: surgir 0.4s ease-out;
+}
+
+.nomePais {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000; /* Preto como você pediu */
+  margin: 5px 0 15px 0;
+  letter-spacing: 1px;
+}
+
+.bandeira {
+  width: 160px;
+  border-radius: 4px;
+  /* Uma sombra um pouco mais forte ajuda a separar a bandeira do fundo cinza */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+  margin-top: 10px;
+}
+
+.textoVitoria {
+  color: #16a34a; /* Verde forte */
+  margin: 0;
+}
+
+.textoDerrota {
+  color: #dc2626; /* Vermelho forte */
+  margin: 0;
+}
+
+.botaoReiniciar {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3b82f6; /* Azul */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botaoReiniciar:hover {
+  background-color: #2563eb;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

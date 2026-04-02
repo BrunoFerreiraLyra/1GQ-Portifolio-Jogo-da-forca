@@ -1,0 +1,72 @@
+/* app/page.module.css */
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f9fafb; /* bg-gray-50 */
+  color: #111827; /* text-gray-900 */
+}
+
+.imageContainer {
+  margin-bottom: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 12px; /* rounded-xl */
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 384px; /* max-w-sm */
+  height: auto;
+  object-fit: cover;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 30px; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  letter-spacing: -0.025em; /* tracking-tight */
+  text-align: center;
+}
+
+.description {
+  max-width: 448px; /* max-w-md */
+  text-align: center;
+  color: #4b5563; /* text-gray-600 */
+  line-height: 1.5;
+}
+
+/* --- ESTILOS DA SEÇÃO DE PROJETOS --- */
+.projetosContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.botaoProjeto {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.botaoProjeto:hover {
+  background-color: #2563eb;
+}
