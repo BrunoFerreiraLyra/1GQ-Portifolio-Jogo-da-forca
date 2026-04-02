@@ -1,0 +1,1 @@
+# 1GQ-Portifolio-Jogo-da-forca
