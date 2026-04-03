@@ -34,12 +34,15 @@
 }
 
 /* --- 3. A PALAVRA E OS TRACINHOS --- */
-.topoContainer {
-  width: 100%;
-  max-width: 600px; /* Mantém alinhado com o tamanho máximo do seu teclado */
+.palavraContainer {
   display: flex;
-  justify-content: flex-start; /* Joga o botão para a esquerda */
-  margin-bottom: 20px;
+  flex-direction: row; /* Força os itens a ficarem lado a lado (horizontal) */
+  gap: 15px; /* Espaço entre as letras */
+  margin: 40px 0;
+  flex-wrap: wrap; /* Se a tela do celular for pequena, a palavra quebra a linha em vez de espremer */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Garante que o contêiner tenha espaço suficiente para não empilhar */
 }
 
 .botaoVoltar {
