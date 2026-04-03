@@ -67,17 +67,24 @@ export default function JogoDaForca() {
     );
   }
 
- return (
+  return (
     <main className={styles.main}>
-      
-      {/* --- NOVO: CONTAINER DO BOTÃO VOLTAR --- */}
+      <h1>Jogo da Forca - Países</h1>
       <div className={styles.topoContainer}>
         <Link href="/" className={styles.botaoVoltar}>
           ⬅ Voltar ao Portfólio
         </Link>
       </div>
-
-      <h1>Jogo da Forca - Países</h1>
+      {/* Área da Forca e Boneco */}
+      <div className={styles.forcaArea}>
+        {/* Como você uniu a forca e o boneco na mesma imagem, podemos renderizar apenas a imagem do erro atual.
+            Se erros for 0, podemos exibir um erro-0.png que seria só a forca vazia. */}
+        <img 
+          src={`/erro-${erros}.png`} 
+          alt={`Forca com ${erros} erros`} 
+          className={styles.imagemBase} 
+        />
+      </div>
 
       {/* A Palavra Oculta */}
       <div className={styles.palavraContainer}>
