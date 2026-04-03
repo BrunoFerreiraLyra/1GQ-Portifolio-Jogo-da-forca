@@ -1,25 +1,16 @@
 /* app/page.module.css */
 
 .main {
+  position: relative; /* <--- ADICIONE ESTA LINHA */
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background-color: #f9fafb; /* bg-gray-50 */
-  color: #111827; /* text-gray-900 */
+ 
 }
 
-.imageContainer {
-  margin-bottom: 24px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  border-radius: 12px; /* arredondamento */
-  overflow: hidden;
-  
-  /* --- MUDANÇA: Controlando o tamanho máximo da caixa da foto --- */
-  max-width: 200px; /* Antes estava sem limite aqui. Reduza ou aumente esse valor como preferir (ex: 180px, 220px) */
-  width: 100%;
+.topoContainer {
+  position: absolute;
+  top: 30px; /* Distância do topo da tela */
+  left: 30px; /* Distância da esquerda da tela */
 }
 .profileImage {
   width: 100%;
