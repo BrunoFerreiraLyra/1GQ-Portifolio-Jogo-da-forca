@@ -26,7 +26,6 @@ export default function Home() {
 
       {/* --- SEÇÃO DE PROJETOS ADICIONADA --- */}
       <div className={styles.projetosContainer}>
-        <h2 className={styles.subtitle}>Meus Projetos</h2>
         
         {/* Esse Link vai apontar para a pasta do jogo que vamos criar */}
         <Link href="/forca" className={styles.botaoProjeto}>
